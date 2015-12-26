@@ -139,9 +139,10 @@ module.exports = function(grunt) {
 
 		clean: {
 			dist: {
-				src: ['../../appletree/'],
+				src: ['../../appletree/', '.tmp'],
 				options: {
-					force: true
+					force: true,
+                    dot: true
 				}
 			}
 		},

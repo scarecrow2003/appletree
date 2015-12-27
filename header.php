@@ -106,27 +106,27 @@ function isPartOfCurrentMenuItem( $item )
 
                     <div class="clearfix"></div>
 
-                    <div class="col-xs-9 col-md-2 pull-right">
+                    <div class="col-xs-9 hidden-md hidden-lg pull-right">
                         <div class="head-social">
                             <ul>
                                 <li>
                                     <a href="http://www.facebook.com/appletreestudiosg"  target="_blank">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.jpg" alt="Facebook">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" alt="Facebook">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="http://www.pinterest.com/appletreesg" target="_blank">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/pinterest.jpg" alt="Pinterest">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/pinterest.png" alt="Pinterest">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="mailto:contactus@appletreesg.com">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/email.jpg" alt="Email Us">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/email.png" alt="Email Us">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="http://www.twitter.com">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/twitter.jpg" alt="Twitter">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" alt="Twitter">
                                     </a>
                                 </li>
                             </ul>
@@ -134,7 +134,7 @@ function isPartOfCurrentMenuItem( $item )
                     </div>
                 </div>
 
-				<div class="col-xs-12 col-md-8 col-md-offset-3 menu"><?php
+				<div class="col-xs-9 col-xs-offset-3 col-md-8 col-md-offset-3 menu"><?php
                     $menuItems = wp_get_nav_menu_items('Header Menu');
 
                     $menuArray = array();
@@ -179,7 +179,7 @@ function isPartOfCurrentMenuItem( $item )
 
                                         echo '<div class="col-sm-6">';
                                         echo '<ul class="multi-column-dropdown">';
-                                        echo '<img class="img-menu-item" src="'.get_template_directory_uri().'/images/facebook-icon.png" />';
+                                        echo '<img class="img-menu-item" src="'.get_template_directory_uri().'/images/facebook.png" />';
                                         echo '</ul>';
                                         echo '</div>';
                                         echo '</div>';
@@ -199,8 +199,35 @@ function isPartOfCurrentMenuItem( $item )
                     </nav>
 				</div>
 
+                <div class="col-md-1 hidden-xs hidden-sm">
+                    <div class="head-social">
+                        <ul>
+                            <li>
+                                <a href="http://www.facebook.com/appletreestudiosg"  target="_blank">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" alt="Facebook">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.pinterest.com/appletreesg" target="_blank">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/pinterest.png" alt="Pinterest">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:contactus@appletreesg.com">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/email.png" alt="Email Us">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.twitter.com">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" alt="Twitter">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="clearfix"></div>
 
-                <div class="col-xs-12 col-md-9 dashed-sep pull-right"></div>
+                <div class="col-xs-9 dashed-sep pull-right"></div>
 
 			</header>

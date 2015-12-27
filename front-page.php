@@ -23,23 +23,23 @@ get_header(); the_post(); ?>
         </div>
         <div class="clearfix"></div>
         <div class="col-sm-3 col-xs-6 cat-link">
-            <a href="<?php echo get_post_meta(get_the_ID(), 'linkthree', true); ?>">
-                <img src="<?php echo get_post_meta(get_the_ID(), 'imagethree', true); ?>" class="img-responsive" alt="New born">
-            </a>
-        </div>
-        <div class="col-sm-3 col-xs-6 cat-link">
             <a href="<?php echo get_post_meta(get_the_ID(), 'linkone', true); ?>">
-                <img src="<?php echo get_post_meta(get_the_ID(), 'imageone', true); ?>" class="img-responsive" alt="Studio">
+                <img src="<?php echo get_post_meta(get_the_ID(), 'imageone', true); ?>" class="img-responsive" alt="New born">
             </a>
         </div>
         <div class="col-sm-3 col-xs-6 cat-link">
             <a href="<?php echo get_post_meta(get_the_ID(), 'linktwo', true); ?>">
-                <img src="<?php echo get_post_meta(get_the_ID(), 'imagetwo', true); ?>" class="img-responsive" alt="Outdoor">
+                <img src="<?php echo get_post_meta(get_the_ID(), 'imagetwo', true); ?>" class="img-responsive" alt="Studio">
             </a>
         </div>
         <div class="col-sm-3 col-xs-6 cat-link">
             <a href="<?php echo get_post_meta(get_the_ID(), 'linkthree', true); ?>">
-                <img src="<?php echo get_post_meta(get_the_ID(), 'imagethree', true); ?>" class="img-responsive" alt="Maternity">
+                <img src="<?php echo get_post_meta(get_the_ID(), 'imagethree', true); ?>" class="img-responsive" alt="Outdoor">
+            </a>
+        </div>
+        <div class="col-sm-3 col-xs-6 cat-link">
+            <a href="<?php echo get_post_meta(get_the_ID(), 'linkfour', true); ?>">
+                <img src="<?php echo get_post_meta(get_the_ID(), 'imagefour', true); ?>" class="img-responsive" alt="Maternity">
             </a>
         </div>
         <div class="clearfix"></div>

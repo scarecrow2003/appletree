@@ -18,7 +18,7 @@ get_header(); the_post(); ?>
             <img src="/wp-content/uploads/2015/11/popular.png">
         </div>
         <div class="col-xs-12">
-            <h1><?php echo get_post_meta(get_the_ID(), 'h1', true); ?></h1>
+            <h1><?php echo __(get_post_meta(get_the_ID(), 'h1', true), 'appletreesg.com'); ?></h1>
             <p><?php the_content(); ?></p>
         </div>
         <div class="clearfix"></div>

@@ -12,13 +12,15 @@ get_header(); the_post(); ?>
     <div class="row wrapper">
         <div class="col-xs-12">
             <h1><?php _e(get_post_meta(get_the_ID(), 'h1', true), 'appletreesg.com'); ?></h1>
-            <div class="nobanner-content">
+            <div>
                 <?php the_content(); ?>
             </div>
         </div>
 
         <?php
-        $slug = substr($_SERVER["REQUEST_URI"], 1, strlen($_SERVER["REQUEST_URI"])-1);
+        $uri = $_SERVER["REQUEST_URI"];
+        $lid = strrpos($uri, '/');
+        $slug = substr($uri, 1, $lid);
         $query_images_args = array(
             'post_type' => 'attachment',
             'post_mime_type' =>'image',

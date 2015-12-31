@@ -12,7 +12,7 @@ get_header(); the_post(); ?>
     <div class="row wrapper">
         <div class="col-xs-12">
             <h1><?php _e(get_post_meta(get_the_ID(), 'h1', true), 'appletreesg.com'); ?></h1>
-            <div class="nobanner-content">
+            <div>
                 <?php the_content(); ?>
             </div>
         </div>

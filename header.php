@@ -13,6 +13,9 @@
 function isPartOfCurrentMenuItem( $item )
 {
     $uri = $_SERVER["REQUEST_URI"];
+    if (strpos($uri, '?') !== false) {
+        $uri = substr($uri, 0, strpos($uri, '?'));
+    }
 
     if( $uri === '/' )
     {
@@ -79,9 +82,13 @@ function isPartOfCurrentMenuItem( $item )
 			<header class="site-header header-menu">
 
                 <div class="header row">
-                    <div id="logo">
+                    <?php
+                    $temp = pathinfo(get_page_template(), PATHINFO_FILENAME);
+                    $hasBanner = $temp == 'template-home' || $temp == 'template-general' || is_front_page();
+                    ?>
+                    <div class="logo" <?php if ($hasBanner) { echo 'id="logo-banner"';} ?>>
                         <?php if ( '' != get_custom_header()->url ) : ?>
-                            <img src="<?php header_image(); ?>" class="img-responsive custom-header" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+                            <img src="<?php header_image(); ?>" class="custom-header" height="<?php echo get_custom_header()->height/($hasBanner ? 1 : 4/3); ?>" width="<?php echo get_custom_header()->width/($hasBanner ? 1 : 4/3); ?>" alt="" />
                         <?php endif; ?>
                     </div>
 
@@ -166,9 +173,16 @@ function isPartOfCurrentMenuItem( $item )
                                         echo '<li class="dropdown">';
                                         echo '<a href="' . $item->url . '" class="dropdown-toggle menu-item-level-1 ' . (isPartOfCurrentMenuItem($item) ? 'active' : '') . '">' . $menuTitle . '</a>';
 
-                                        echo '<ul class="dropdown-menu dropdown-menu-custom dropdown-menu-custom-left multi-column columns-2">';
+                                        echo '<ul class="dropdown-menu dropdown-menu-custom">';
+                                        foreach ($item->children as $childItem) {
+                                            $menuChildItem = __($childItem->title, 'appletreesg.com');
+                                            echo '<li><a href="'.$childItem->url.'">'.$menuChildItem.'</a></li>';
+                                        }
+                                        echo '</ul>';
+
+                                        /*echo '<ul class="dropdown-menu dropdown-menu-custom dropdown-menu-custom-left multi-column columns-2">';
                                         echo '<div class="row">';
-                                        echo '<div class="col-sm-6">';
+                                        echo '<div class="col-xs-4">';
                                         echo '<ul class="multi-column-dropdown">';
                                         foreach ($item->children as $childItem) {
                                             $menuChildItem = __($childItem->title, 'appletreesg.com');
@@ -177,13 +191,13 @@ function isPartOfCurrentMenuItem( $item )
                                         echo '</ul>';
                                         echo '</div>';
 
-                                        echo '<div class="col-sm-6">';
+                                        echo '<div class="col-xs-8">';
                                         echo '<ul class="multi-column-dropdown">';
                                         echo '<img class="img-menu-item" src="'.get_template_directory_uri().'/images/facebook.png" />';
                                         echo '</ul>';
                                         echo '</div>';
                                         echo '</div>';
-                                        echo '</ul>';
+                                        echo '</ul>';*/
 
                                         echo '</li>';
                                     }

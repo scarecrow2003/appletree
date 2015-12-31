@@ -239,6 +239,40 @@ module.exports = function(grunt) {
                     dest: '.tmp/styles/'
                 }]
             }
+        },
+
+        pot: {
+            options: {
+                text_domain: 'appletreesg.com',
+                dest: '../languages/',
+                keywords: [ // WordPress localisation functions
+                    '__:1',
+                    '_e:1',
+                    '_x:1,2c',
+                    'esc_html__:1',
+                    'esc_html_e:1',
+                    'esc_html_x:1,2c',
+                    'esc_attr__:1',
+                    'esc_attr_e:1',
+                    'esc_attr_x:1,2c',
+                    '_ex:1,2c',
+                    '_n:1,2',
+                    '_nx:1,2,4c',
+                    '_n_noop:1,2',
+                    '_nx_noop:1,2,3c'
+                ]
+            },
+            files: {
+                src: '../*.php',
+                expand: true
+            }
+        },
+
+        po2mo: {
+            files: {
+                src: '../languages/*.po',
+                expand: true
+            }
         }
 	});
 
@@ -256,6 +290,22 @@ module.exports = function(grunt) {
         'cssmin'
 	]);
 
+    grunt.registerTask('build', function() {
+        grunt.task.run([
+            'jshint',
+            'uglify',
+            /*'sass:prod',
+             'sass:editorstyles',*/
+            'sass',
+            'autoprefixer',
+            'cssmin',
+            'clean:dist',
+            'copyto:dist',
+            'copy:bowerFiles',
+            'notify:dist'
+        ]);
+    });
+
 	// Production task
 	grunt.registerTask('dist', function() {
 		grunt.task.run([
@@ -267,6 +317,7 @@ module.exports = function(grunt) {
             'autoprefixer',
             'cssmin',
 			'clean:dist',
+            'po2mo',
 			'copyto:dist',
             'copy:bowerFiles',
 			'notify:dist'

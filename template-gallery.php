@@ -36,10 +36,16 @@ get_header(); the_post(); ?>
         );
         $query_images = new WP_Query( $query_images_args );
         if ( $query_images->have_posts() ) {
+            $index = 1;
             while ( $query_images->have_posts() ) {
-                $query_images->the_post();;
+                $query_images->the_post();
                 $url = wp_get_attachment_url( get_the_ID());
-                echo '<div class="col-xs-12 category-img"><img src="'.$url.'" class="img-responsive"></div>';
+                $alt = get_post_meta(get_the_ID(), '_wp_attachment_image_alt', true);
+                if ($alt == "") {
+                    $alt = "Photo ".$index;
+                }
+                echo '<div class="col-xs-12 category-img"><img src="'.$url.'" class="img-responsive" alt="'.$alt.'"></div>';
+                $index++;
             }
         }
         wp_reset_postdata();

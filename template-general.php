@@ -11,11 +11,11 @@ get_header(); the_post(); ?>
 <?php if( is_page() ): ?>
     <div class="row wrapper">
         <div class="col-xs-12">
-            <img src="<?php echo get_post_meta(get_the_ID(), 'banner', true); ?>" class="img-responsive" />
+            <img src="<?php echo get_post_meta(get_the_ID(), 'banner', true); ?>" class="img-responsive" alt="Banner"/>
         </div>
         <div class="clearfix"></div>
         <div class="apple-sep">
-            <img src="/wp-content/uploads/2015/11/popular.png">
+            <img src="/wp-content/uploads/2015/11/popular.png" alt="Separator">
         </div>
         <div class="col-xs-12">
             <h1><?php _e(get_post_meta(get_the_ID(), 'h1', true), 'appletreesg.com'); ?></h1>

@@ -148,6 +148,9 @@ msgstr "价格"
 msgid "FAQ"
 msgstr "常见问题"
 
+msgid "Frequently Asked Questions"
+msgstr "常见问题"
+
 msgid "New Born Photos"
 msgstr "新生儿照片"
 
@@ -171,6 +174,12 @@ msgstr "写真照片"
 
 msgid "Commercial Photos"
 msgstr "商业照片"
+
+msgid "Studio Photos"
+msgstr "影棚照片"
+
+msgid "Outdoor Photos"
+msgstr "外景照片"
 
 #: header.php
 msgid "About"

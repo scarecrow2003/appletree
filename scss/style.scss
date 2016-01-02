@@ -12,44 +12,9 @@
 
 @import "../grunt/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
-
-/*
-@import "vendor/normalize";
-@import "vendor/bourbon/bourbon";
-@import "grid-settings";
-@import "base";
-@import "typography";
-@import "components";
-@import "wp-base";
-@import "header";
-@import "navigation";
-@import "content";
-@import "post-formats";
-@import "footer";
-*/
-
 $brand-primary: #bf8e27;
 
-
-
-
-$color-grey-2: darkgrey;
-
-
-$color-gold-2: #f0bb3e;
-
-
-
 $color-header-1: #663300;
-
-
-$color-menu-3: #D21D23;
-
-
-
-
-
-
 
 $color-grey-1: #e8e8e8;
 
@@ -58,26 +23,21 @@ $color-white: #ffffff;
 $color-gold-1: #fbc251;
 
 $color-1: #808080;
-$color-2: #fbf7ee;
-$color-3: #B78260;
+$color-2: #B78260;
 
-$color-menu-1: #FFE1CE;
+$color-link-1: #A53E3F;
+$color-link-2: #FB8CC1;
+$color-link-3: #5C9101;
+$color-link-4: #F9A948;
+
 $color-menu-2: #FFF0E7;
 $color-menu-4: #191919;
 $color-menu-5: #502E0C;
 
-$body-color: $color-1;
-$body-bg-color: $color-2;
 
 $font-size-2: 13px;
 
 $max-content-width: 940px;
-
-//@import url(http://fonts.googleapis.com/earlyaccess/notosanssc.css);
-//@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
-//@import url(http://fonts.googleapis.com/earlyaccess/cwtexkai.css);
-//@import url(http://fonts.googleapis.com/earlyaccess/cwtexming.css);
-@import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 
 @font-face {
   font-family: 'Neutraface2Text-Bold';
@@ -104,7 +64,7 @@ $max-content-width: 940px;
   src: url('fonts/Neutra2Text-Light.woff');
 }
 
-$font-family-2: 'Neutraface2Text-Demi', 'cwTeXYen', Arial, Helvetica, sans-serif;
+$font-family-2: 'Neutraface2Text-Demi', Arial, Helvetica, sans-serif;
 
 a{
   cursor: hand;
@@ -118,7 +78,6 @@ html {
 }
 
 body {
-  //background: $body-bg-color;
   font: normal 14px/16px $font-family-2;
   height:100%;
   background-color: #fbf7ee;
@@ -144,7 +103,6 @@ p {
 }
 
 .site {
-  //background-image: url(../images/bg.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-attachment: scroll;
@@ -167,47 +125,6 @@ p {
     li { float: right; margin-left: 10px; }
   }
 }
-
-/*@media screen and (max-width: $screen-md-max) {
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all .25s ease-out;
-    -o-transition: all .25s ease-out;
-    transition: all .25s ease-out;
-  }
-
-  .row-offcanvas-right {
-    right: 0;
-  }
-
-  .row-offcanvas-left {
-    left: 0;
-  }
-
-  .row-offcanvas-right
-  .sidebar-offcanvas {
-    right: -50%;
-  }
-
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    left: -50%;
-  }
-
-  .row-offcanvas-right.active {
-    right: 50%;
-  }
-
-  .row-offcanvas-left.active {
-    left: 50%;
-  }
-
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 50%;
-  }
-}*/
 
 #sidebar {
   @media (min-width: $screen-lg-min) {
@@ -291,13 +208,13 @@ p {
       position: absolute;
       left: 5px;
       top: 5px;
+      z-index: 10000;
     }
 
     #logo-banner {
       @media (min-width: $screen-md-min) {
         left: 30px;
         top: 30px;
-        z-index: 10000;
       }
     }
   }
@@ -308,10 +225,6 @@ p {
   }
 
   .navbar-header-custom {
-    /*@media (max-width: $screen-sm-max) {
-      display: block;
-    }*/
-
     position: absolute;
     top: 18px;
     right: 0;
@@ -319,21 +232,12 @@ p {
     .icon-bar-custom {
       background: $color-menu-5;
     }
-
-    .navbar-toggle-custom {
-      /*@media (max-width: $screen-sm-max) {
-        display: block;
-        margin-right: 5px;
-      }*/
-    }
   }
 
   .menu {
     margin-bottom: 0;
     margin-top: 5px;
     min-height: 0;
-//    height: 35px;
-//    background-image: linear-gradient(to bottom, $color-menu-1 0%, $color-menu-2 50%);
     font-family: $font-family-2;
     font-size: $font-size-2;
 
@@ -361,12 +265,11 @@ p {
       .menu-item-level-1 {
         min-width: 60px;
 
-//        @media (min-width: $screen-md-min) {
           padding: 6px;
           width: auto;
           text-align: center;
           border-radius: 6px 6px 0 0;
-          color: $color-3;
+          color: $color-2;
           outline: none;
 
           &:hover, &:focus {
@@ -375,11 +278,6 @@ p {
             color: $color-1;
             background-image: linear-gradient(to bottom, $color-white 0%, $color-grey-1 50%);
           }
-//        }
-
-        /*@media (min-width: $screen-lg-min) {
-          min-width: 120px;
-        }*/
       }
 
       .active {
@@ -391,6 +289,7 @@ p {
       }
 
       .dropdown-menu-custom {
+        position: absolute;
         min-width: 100px;
         min-height: 170px;
         background-image: linear-gradient(to bottom, $color-white 0%, $color-grey-1 50%);
@@ -398,64 +297,11 @@ p {
         border-bottom: 1px solid $color-grey-1;
         border-radius: 0;
 
-        /*&.columns-2 {
-          min-width: 70px;
-        }*/
-
         li a {
           padding: 2px 15px;
           font-weight: 300;
         }
       }
-
-      /*.dropdown-menu-custom-left {
-        left: 0;
-      }
-
-      .dropdown-menu-custom-right {
-        left: auto;
-        right: 0;
-      }*/
-
-      /*.multi-column-dropdown {
-        list-style: none;
-        padding: 20px;
-
-        li {
-          padding: 0;
-
-          a {
-            display: block;
-            clear: both;
-            line-height: 1.428571429;
-            color: #333;
-            white-space: normal;
-            padding: 5px 2px;
-            font-family: $font-family-2;
-            font-size: $font-size-2;
-
-            &:hover {
-              text-decoration: none;
-              color: #262626;
-              border-bottom: 1px solid $color-grey-2;
-              padding-bottom: 4px;
-            }
-          }
-        }
-
-        .img-menu-item {
-          width: 120px;
-          height: 120px;
-          float: right;
-        }
-      }*/
-
-      /*@media (max-width: $screen-sm-max) {
-        .dropdown-menu.multi-column {
-          min-width: 240px !important;
-          overflow-x: hidden;
-        }
-      }*/
     }
   }
 }
@@ -490,5 +336,30 @@ p {
 
 .contact-item {
   margin-right: 10px;
+}
+
+.link-text {
+  text-align: center;
+  height: 50px;
+  max-width: 300px;
+
+  &#link-1 {
+    background-color: $color-link-1;
+  }
+  &#link-2 {
+    background-color: $color-link-2;
+  }
+  &#link-3 {
+    background-color: $color-link-3;
+  }
+  &#link-4 {
+    background-color: $color-link-4;
+  }
+
+  label {
+    padding-top: 15px;
+    font-size: 1.8em;
+    color: white;
+  }
 }
 

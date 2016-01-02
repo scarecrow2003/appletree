@@ -11,11 +11,11 @@ get_header(); the_post(); ?>
 <?php if( is_page() ): ?>
     <div class="row wrapper">
         <div class="col-xs-12">
-            <?php echo do_shortcode('[advps-slideshow optset="2"]'); ?>
+            <?php echo do_shortcode('[wp_owl id="225"]'); ?>
         </div>
         <div class="clearfix"></div>
         <div class="apple-sep">
-            <img src="/wp-content/uploads/2015/11/popular.png">
+            <img src="/wp-content/uploads/2015/11/popular.png" width="16" height="16" alt="separator">
         </div>
         <div class="col-xs-12">
             <h1><?php echo __(get_post_meta(get_the_ID(), 'h1', true), 'appletreesg.com'); ?></h1>
@@ -24,22 +24,34 @@ get_header(); the_post(); ?>
         <div class="clearfix"></div>
         <div class="col-sm-3 col-xs-6 cat-link">
             <a href="<?php echo get_post_meta(get_the_ID(), 'linkone', true); ?>">
-                <img src="<?php echo get_post_meta(get_the_ID(), 'imageone', true); ?>" class="img-responsive" alt="New born">
+                <img src="<?php echo get_post_meta(get_the_ID(), 'imageone', true); ?>" width="300" height="307" class="img-responsive" alt="New born">
+                <div class="link-text" id="link-1">
+                    <label>Dream Begin</label>
+                </div>
             </a>
         </div>
         <div class="col-sm-3 col-xs-6 cat-link">
             <a href="<?php echo get_post_meta(get_the_ID(), 'linktwo', true); ?>">
-                <img src="<?php echo get_post_meta(get_the_ID(), 'imagetwo', true); ?>" class="img-responsive" alt="Studio">
+                <img src="<?php echo get_post_meta(get_the_ID(), 'imagetwo', true); ?>" width="300" height="307" class="img-responsive" alt="Studio">
+                <div class="link-text" id="link-2">
+                    <label>Happy Life</label>
+                </div>
             </a>
         </div>
         <div class="col-sm-3 col-xs-6 cat-link">
             <a href="<?php echo get_post_meta(get_the_ID(), 'linkthree', true); ?>">
-                <img src="<?php echo get_post_meta(get_the_ID(), 'imagethree', true); ?>" class="img-responsive" alt="Outdoor">
+                <img src="<?php echo get_post_meta(get_the_ID(), 'imagethree', true); ?>" width="300" height="307" class="img-responsive" alt="Outdoor">
+                <div class="link-text" id="link-3">
+                    <label>Forest Story</label>
+                </div>
             </a>
         </div>
         <div class="col-sm-3 col-xs-6 cat-link">
             <a href="<?php echo get_post_meta(get_the_ID(), 'linkfour', true); ?>">
-                <img src="<?php echo get_post_meta(get_the_ID(), 'imagefour', true); ?>" class="img-responsive" alt="Maternity">
+                <img src="<?php echo get_post_meta(get_the_ID(), 'imagefour', true); ?>" width="300" height="307" class="img-responsive" alt="Maternity">
+                <div class="link-text" id="link-4">
+                    <label>All Love</label>
+                </div>
             </a>
         </div>
         <div class="clearfix"></div>

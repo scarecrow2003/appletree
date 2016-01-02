@@ -42,9 +42,9 @@ get_header(); the_post(); ?>
                 $query_images->the_post();
                 $url = wp_get_attachment_url( get_the_ID());
                 if ($index != 6) {
-                    echo '<div class="col-xs-6 col-sm-4 col-md-3 category-img text-center"><a href="/' . $links[$index] . '"><img src="' . $url . '" class="img-responsive"><h3>' . __($galleries[$index], 'appletreesg.com') . '</h3></a></div>';
+                    echo '<div class="col-xs-6 col-sm-4 col-md-3 category-img text-center"><a href="/' . $links[$index] . '"><img src="' . $url . '" class="img-responsive" alt="'.$galleries[$index].'"><h3>' . __($galleries[$index], 'appletreesg.com') . '</h3></a></div>';
                 } else {
-                    echo '<div class="col-xs-6 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-0 category-img text-center"><a href="/' . $links[$index] . '"><img src="' . $url . '" class="img-responsive"><h3>' . __($galleries[$index], 'appletreesg.com') . '</h3></a></div>';
+                    echo '<div class="col-xs-6 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-0 category-img text-center"><a href="/' . $links[$index] . '"><img src="' . $url . '" class="img-responsive" alt="'.$galleries[$index].'"><h3>' . __($galleries[$index], 'appletreesg.com') . '</h3></a></div>';
                 }
                 $index++;
             }

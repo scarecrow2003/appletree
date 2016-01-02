@@ -54,25 +54,12 @@ function isPartOfCurrentMenuItem( $item )
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><?php wp_title( ); ?></title>
 		<meta name="viewport" content="width=device-width" />
-		<!--[if lt IE 9]>
-			<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
-		<![endif]-->
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bower_components/font-awesome/css/font-awesome.css" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bower_components/owl.carousel/dist/assets/owl.theme.default.min.css" />
 
         <!-- Template stylesheets -->
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
-        <!-- Template scripts -->
-        <!--<script src="<?php /*echo get_template_directory_uri(); */?>/bower_components/modernizr/modernizr.js"></script>-->
-        <script type="text/javascript">
-            var templateDir = "<?php bloginfo('template_directory') ?>";
-        </script>
-
 
 		<?php wp_head(); ?>
 	</head>
@@ -88,7 +75,7 @@ function isPartOfCurrentMenuItem( $item )
                     ?>
                     <div class="logo" <?php if ($hasBanner) { echo 'id="logo-banner"';} ?>>
                         <?php if ( '' != get_custom_header()->url ) : ?>
-                            <img src="<?php header_image(); ?>" class="custom-header" height="<?php echo get_custom_header()->height/($hasBanner ? 1 : 4/3); ?>" width="<?php echo get_custom_header()->width/($hasBanner ? 1 : 4/3); ?>" alt="" />
+                            <img src="<?php header_image(); ?>" class="custom-header" height="<?php echo get_custom_header()->height/($hasBanner ? 1 : 4/3); ?>" width="<?php echo get_custom_header()->width/($hasBanner ? 1 : 4/3); ?>" alt="logo" />
                         <?php endif; ?>
                     </div>
 
@@ -118,22 +105,22 @@ function isPartOfCurrentMenuItem( $item )
                             <ul>
                                 <li>
                                     <a href="http://www.facebook.com/appletreestudiosg"  target="_blank">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" alt="Facebook">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" width="24" height="24" alt="Facebook">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="http://www.pinterest.com/appletreesg" target="_blank">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/pinterest.png" alt="Pinterest">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/pinterest.png" width="24" height="24" alt="Pinterest">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="mailto:contactus@appletreesg.com">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/email.png" alt="Email Us">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/email.png" width="24" height="24" alt="Email Us">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="http://www.twitter.com">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" alt="Twitter">
+                                    <a href="https://twitter.com/appletreesg">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" width="24" height="24" alt="Twitter">
                                     </a>
                                 </li>
                             </ul>
@@ -179,26 +166,6 @@ function isPartOfCurrentMenuItem( $item )
                                             echo '<li><a href="'.$childItem->url.'">'.$menuChildItem.'</a></li>';
                                         }
                                         echo '</ul>';
-
-                                        /*echo '<ul class="dropdown-menu dropdown-menu-custom dropdown-menu-custom-left multi-column columns-2">';
-                                        echo '<div class="row">';
-                                        echo '<div class="col-xs-4">';
-                                        echo '<ul class="multi-column-dropdown">';
-                                        foreach ($item->children as $childItem) {
-                                            $menuChildItem = __($childItem->title, 'appletreesg.com');
-                                            echo '<li><a href="' . $childItem->url . '">' . $menuChildItem . '</a></li>';
-                                        }
-                                        echo '</ul>';
-                                        echo '</div>';
-
-                                        echo '<div class="col-xs-8">';
-                                        echo '<ul class="multi-column-dropdown">';
-                                        echo '<img class="img-menu-item" src="'.get_template_directory_uri().'/images/facebook.png" />';
-                                        echo '</ul>';
-                                        echo '</div>';
-                                        echo '</div>';
-                                        echo '</ul>';*/
-
                                         echo '</li>';
                                     }
                                     else
@@ -218,22 +185,22 @@ function isPartOfCurrentMenuItem( $item )
                         <ul>
                             <li>
                                 <a href="http://www.facebook.com/appletreestudiosg"  target="_blank">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" alt="Facebook">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" width="24" height="24" alt="Facebook">
                                 </a>
                             </li>
                             <li>
                                 <a href="http://www.pinterest.com/appletreesg" target="_blank">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/pinterest.png" alt="Pinterest">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/pinterest.png" width="24" height="24" alt="Pinterest">
                                 </a>
                             </li>
                             <li>
                                 <a href="mailto:contactus@appletreesg.com">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/email.png" alt="Email Us">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/email.png" width="24" height="24" alt="Email Us">
                                 </a>
                             </li>
                             <li>
-                                <a href="http://www.twitter.com">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" alt="Twitter">
+                                <a href="https://twitter.com/appletreesg">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" width="24" height="24" alt="Twitter">
                                 </a>
                             </li>
                         </ul>

@@ -37,7 +37,7 @@
         <!-- Bower dependencies: Bootstrap plugins -->
         <script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
         <!-- Template script dependency -->
-        <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.min.js"></script>
 
 		<?php wp_footer(); ?>
 	</body>

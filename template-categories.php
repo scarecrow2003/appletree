@@ -33,19 +33,16 @@ get_header(); the_post(); ?>
                 ),
             ),
         );
-        $galleries = ['Maternity', 'New Born', 'Baby', 'Party', 'Children', 'Family', 'Senior', 'Commercial'];
-        $links = ['maternity', 'new-born', 'baby', 'party', 'children', 'family', 'senior', 'commercial'];
         $query_images = new WP_Query( $query_images_args );
         if ( $query_images->have_posts() ) {
             $index = 0;
+            $count = $query_images->post_count;
             while ( $query_images->have_posts() ) {
                 $query_images->the_post();
                 $url = wp_get_attachment_url( get_the_ID());
-                if ($index != 6) {
-                    echo '<div class="col-xs-6 col-sm-4 col-md-3 category-img text-center"><a href="/' . $links[$index] . '"><img src="' . $url . '" class="img-responsive" alt="'.$galleries[$index].'"><h3>' . __($galleries[$index], 'appletreesg.com') . '</h3></a></div>';
-                } else {
-                    echo '<div class="col-xs-6 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-0 category-img text-center"><a href="/' . $links[$index] . '"><img src="' . $url . '" class="img-responsive" alt="'.$galleries[$index].'"><h3>' . __($galleries[$index], 'appletreesg.com') . '</h3></a></div>';
-                }
+                $alt = get_post_meta(get_the_ID(), '_wp_attachment_image_alt', true);
+                $link = str_replace(' ', '-', strtolower($alt));
+                echo '<div class="col-xs-6 col-sm-4 col-md-3 category-img text-center"><a href="/' . $link . '"><img src="' . $url . '" class="img-responsive" alt="'.$alt.'"><div class="link-text gallery-link-text"><label>'.$alt.'</label></div></a></div>';
                 $index++;
             }
         }

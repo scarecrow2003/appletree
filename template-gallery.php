@@ -26,6 +26,8 @@ get_header(); the_post(); ?>
             'post_mime_type' =>'image',
             'post_status' => 'inherit',
             'posts_per_page' => -1,
+            'orderby' => 'slug',
+            'order' => 'ASC',
             'tax_query' => array(
                 array(
                     'taxonomy' => 'category',

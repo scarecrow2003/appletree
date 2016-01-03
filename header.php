@@ -105,22 +105,22 @@ function isPartOfCurrentMenuItem( $item )
                             <ul>
                                 <li>
                                     <a href="http://www.facebook.com/appletreestudiosg"  target="_blank">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" width="24" height="24" alt="Facebook">
+                                        <img src="/wp-content/uploads/2016/01/facebook.png" width="24" height="24" alt="Facebook">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="http://www.pinterest.com/appletreesg" target="_blank">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/pinterest.png" width="24" height="24" alt="Pinterest">
+                                        <img src="/wp-content/uploads/2016/01/pinterest.png" width="24" height="24" alt="Pinterest">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="mailto:contactus@appletreesg.com">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/email.png" width="24" height="24" alt="Email Us">
+                                        <img src="/wp-content/uploads/2016/01/email.png" width="24" height="24" alt="Email Us">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://twitter.com/appletreesg">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" width="24" height="24" alt="Twitter">
+                                        <img src="/wp-content/uploads/2016/01/twitter.png" width="24" height="24" alt="Twitter">
                                     </a>
                                 </li>
                             </ul>
@@ -185,22 +185,22 @@ function isPartOfCurrentMenuItem( $item )
                         <ul>
                             <li>
                                 <a href="http://www.facebook.com/appletreestudiosg"  target="_blank">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" width="24" height="24" alt="Facebook">
+                                    <img src="/wp-content/uploads/2016/01/facebook.png" width="24" height="24" alt="Facebook">
                                 </a>
                             </li>
                             <li>
                                 <a href="http://www.pinterest.com/appletreesg" target="_blank">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/pinterest.png" width="24" height="24" alt="Pinterest">
+                                    <img src="/wp-content/uploads/2016/01/pinterest.png" width="24" height="24" alt="Pinterest">
                                 </a>
                             </li>
                             <li>
                                 <a href="mailto:contactus@appletreesg.com">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/email.png" width="24" height="24" alt="Email Us">
+                                    <img src="/wp-content/uploads/2016/01/email.png" width="24" height="24" alt="Email Us">
                                 </a>
                             </li>
                             <li>
                                 <a href="https://twitter.com/appletreesg">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" width="24" height="24" alt="Twitter">
+                                    <img src="/wp-content/uploads/2016/01/twitter.png" width="24" height="24" alt="Twitter">
                                 </a>
                             </li>
                         </ul>

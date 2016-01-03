@@ -332,6 +332,9 @@ p {
 
 .category-img {
   margin: 5px 0;
+  img {
+    margin: auto;
+  }
 }
 
 .contact-item {
@@ -340,8 +343,7 @@ p {
 
 .link-text {
   text-align: center;
-  height: 50px;
-  max-width: 300px;
+  background-color: $color-link-2;
 
   &#link-1 {
     background-color: $color-link-1;
@@ -357,9 +359,24 @@ p {
   }
 
   label {
+    color: white;
+  }
+}
+
+.home-link-text {
+  height: 50px;
+  max-width: 300px;
+  label {
     padding-top: 15px;
     font-size: 1.8em;
-    color: white;
+  }
+}
+
+.gallery-link-text {
+  height: 30px;
+  label {
+    padding-top: 8px;
+    font-size: 1em;
   }
 }
 

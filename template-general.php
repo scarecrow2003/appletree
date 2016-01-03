@@ -15,7 +15,7 @@ get_header(); the_post(); ?>
         </div>
         <div class="clearfix"></div>
         <div class="apple-sep">
-            <img src="/wp-content/uploads/2015/11/popular.png" alt="Separator">
+            <img src="/wp-content/uploads/2015/11/popular.png" width="16" height="16" alt="Separator">
         </div>
         <div class="col-xs-12">
             <h1><?php _e(get_post_meta(get_the_ID(), 'h1', true), 'appletreesg.com'); ?></h1>

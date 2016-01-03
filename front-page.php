@@ -25,7 +25,7 @@ get_header(); the_post(); ?>
         <div class="col-sm-3 col-xs-6 cat-link">
             <a href="<?php echo get_post_meta(get_the_ID(), 'linkone', true); ?>">
                 <img src="<?php echo get_post_meta(get_the_ID(), 'imageone', true); ?>" width="300" height="307" class="img-responsive" alt="New born">
-                <div class="link-text" id="link-1">
+                <div class="link-text home-link-text" id="link-1">
                     <label>Dream Begin</label>
                 </div>
             </a>
@@ -33,7 +33,7 @@ get_header(); the_post(); ?>
         <div class="col-sm-3 col-xs-6 cat-link">
             <a href="<?php echo get_post_meta(get_the_ID(), 'linktwo', true); ?>">
                 <img src="<?php echo get_post_meta(get_the_ID(), 'imagetwo', true); ?>" width="300" height="307" class="img-responsive" alt="Studio">
-                <div class="link-text" id="link-2">
+                <div class="link-text home-link-text" id="link-2">
                     <label>Happy Life</label>
                 </div>
             </a>
@@ -41,7 +41,7 @@ get_header(); the_post(); ?>
         <div class="col-sm-3 col-xs-6 cat-link">
             <a href="<?php echo get_post_meta(get_the_ID(), 'linkthree', true); ?>">
                 <img src="<?php echo get_post_meta(get_the_ID(), 'imagethree', true); ?>" width="300" height="307" class="img-responsive" alt="Outdoor">
-                <div class="link-text" id="link-3">
+                <div class="link-text home-link-text" id="link-3">
                     <label>Forest Story</label>
                 </div>
             </a>
@@ -49,7 +49,7 @@ get_header(); the_post(); ?>
         <div class="col-sm-3 col-xs-6 cat-link">
             <a href="<?php echo get_post_meta(get_the_ID(), 'linkfour', true); ?>">
                 <img src="<?php echo get_post_meta(get_the_ID(), 'imagefour', true); ?>" width="300" height="307" class="img-responsive" alt="Maternity">
-                <div class="link-text" id="link-4">
+                <div class="link-text home-link-text" id="link-4">
                     <label>All Love</label>
                 </div>
             </a>

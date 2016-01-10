@@ -88,8 +88,9 @@ module.exports = function(grunt) {
 			scss: {
 				files: ['../scss/**/*.scss'],
 				tasks: [
-					'sass:dev',
-					'sass:editorstyles',
+					'sass:dist',
+                    'autoprefixer',
+                    'cssmin',
 					'notify:scss'
 				]
 			},

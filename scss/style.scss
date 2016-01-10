@@ -273,18 +273,21 @@ p {
           outline: none;
 
           &:hover, &:focus {
-            padding-top: 5px;
-            border-top: 1px solid $color-grey-1;
+//            padding-top: 5px;
+//            border-top: 1px solid $color-grey-1;
             color: $color-1;
-            background-image: linear-gradient(to bottom, $color-white 0%, $color-grey-1 50%);
+//            background-image: linear-gradient(to bottom, $color-white 0%, $color-grey-1 50%);
           }
+        &:hover {
+          background-color: transparent;
+        }
       }
 
       .active {
-        padding-top: 5px;
-        border-top: 1px solid $color-gold-1;
+//        padding-top: 5px;
+//        border-top: 1px solid $color-gold-1;
         color: $color-1;
-        background-image: linear-gradient(to bottom, $color-white 0%, $color-grey-1 50%);
+//        background-image: linear-gradient(to bottom, $color-white 0%, $color-grey-1 50%);
         border-radius: 6px 6px 0 0;
       }
 
@@ -370,6 +373,13 @@ p {
     padding-top: 15px;
     font-size: 1.8em;
   }
+  @media (max-width: $screen-sm-max) {
+    height: 40px;
+    label {
+      padding-top: 10px;
+      font-size: 1.5em;
+    }
+  }
 }
 
 .gallery-link-text {
@@ -379,4 +389,44 @@ p {
     font-size: 1em;
   }
 }
+
+.email, .facebook, .pinterest, .twitter{
+  background: url('images/sprites.png') no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.email{
+  background-position: -24px -24px ;
+}
+
+.facebook{
+  background-position: 0 -24px ;
+}
+
+.pinterest{
+  background-position: -24px 0;
+}
+
+.twitter{
+  background-position: 0 0;
+}
+
+.pagination {
+  width: 100%;
+  text-align: center;
+  ul.page-numbers {
+    li {
+      display: inline-block;
+      font-size: 1.5em;
+      margin: 0 10px;
+    }
+  }
+}
+
+.post-content img {
+  height: auto;
+  max-width: 100%;
+}
+
 

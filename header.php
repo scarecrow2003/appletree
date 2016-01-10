@@ -105,22 +105,22 @@ function isPartOfCurrentMenuItem( $item )
                             <ul>
                                 <li>
                                     <a href="http://www.facebook.com/appletreestudiosg"  target="_blank">
-                                        <img src="/wp-content/uploads/2016/01/facebook.png" width="24" height="24" alt="Facebook">
+                                        <div class="facebook"></div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="http://www.pinterest.com/appletreesg" target="_blank">
-                                        <img src="/wp-content/uploads/2016/01/pinterest.png" width="24" height="24" alt="Pinterest">
+                                        <div class="pinterest"></div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="mailto:contactus@appletreesg.com">
-                                        <img src="/wp-content/uploads/2016/01/email.png" width="24" height="24" alt="Email Us">
+                                        <div class="email"></div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://twitter.com/appletreesg">
-                                        <img src="/wp-content/uploads/2016/01/twitter.png" width="24" height="24" alt="Twitter">
+                                        <div class="twitter"></div>
                                     </a>
                                 </li>
                             </ul>
@@ -185,22 +185,22 @@ function isPartOfCurrentMenuItem( $item )
                         <ul>
                             <li>
                                 <a href="http://www.facebook.com/appletreestudiosg"  target="_blank">
-                                    <img src="/wp-content/uploads/2016/01/facebook.png" width="24" height="24" alt="Facebook">
+                                    <div class="facebook"></div>
                                 </a>
                             </li>
                             <li>
                                 <a href="http://www.pinterest.com/appletreesg" target="_blank">
-                                    <img src="/wp-content/uploads/2016/01/pinterest.png" width="24" height="24" alt="Pinterest">
+                                    <div class="pinterest"></div>
                                 </a>
                             </li>
                             <li>
                                 <a href="mailto:contactus@appletreesg.com">
-                                    <img src="/wp-content/uploads/2016/01/email.png" width="24" height="24" alt="Email Us">
+                                    <div class="email"></div>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://twitter.com/appletreesg">
-                                    <img src="/wp-content/uploads/2016/01/twitter.png" width="24" height="24" alt="Twitter">
+                                    <div class="twitter"></div>
                                 </a>
                             </li>
                         </ul>

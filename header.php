@@ -73,10 +73,13 @@ function isPartOfCurrentMenuItem( $item )
                     $temp = pathinfo(get_page_template(), PATHINFO_FILENAME);
                     $hasBanner = $temp == 'template-home' || $temp == 'template-general' || is_front_page();
                     ?>
-                    <div class="logo" <?php if ($hasBanner) { echo 'id="logo-banner"';} ?>>
-                        <?php if ( '' != get_custom_header()->url ) : ?>
-                            <img src="<?php header_image(); ?>" class="custom-header" height="<?php echo get_custom_header()->height/($hasBanner ? 1 : 4/3); ?>" width="<?php echo get_custom_header()->width/($hasBanner ? 1 : 4/3); ?>" alt="logo" />
-                        <?php endif; ?>
+                    <div class="logo-container" <?php if ($hasBanner) { echo 'id="logo-banner"';} ?>>
+                        <a href="/">
+                            <img class="logo" alt="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABpJREFUeNrtwTEBAAAAwqD1T20ND6AAAIB3Awu4AAFSPGZ8AAAAAElFTkSuQmCC">
+                        </a>
+                        <?php /*if ( '' != get_custom_header()->url ) : */?><!--
+                            <img src="<?php /*header_image(); */?>" class="custom-header" height="<?php /*echo get_custom_header()->height/($hasBanner ? 1 : 4/3); */?>" width="<?php /*echo get_custom_header()->width/($hasBanner ? 1 : 4/3); */?>" alt="logo" />
+                        --><?php /*endif; */?>
                     </div>
 
                     <div class="col-xs-6 pull-right">

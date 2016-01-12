@@ -204,17 +204,21 @@ p {
     height: 25px;
     padding: 0;
 
-    .logo {
+    .logo-container {
       position: absolute;
       left: 5px;
       top: 5px;
       z-index: 10000;
+      width: 100px;
+      height: 100px;
     }
 
     #logo-banner {
       @media (min-width: $screen-md-min) {
         left: 30px;
         top: 30px;
+        width: 150px;
+        height: 150px;
       }
     }
   }
@@ -313,7 +317,7 @@ p {
   margin: 10px 12px 5px 12px;
   text-align: center;
   border-bottom: 1px dashed grey;
-  img {
+  .popular {
     margin-bottom: -8px;
   }
 }
@@ -390,27 +394,16 @@ p {
   }
 }
 
-.email, .facebook, .pinterest, .twitter{
-  background: url('images/sprites.png') no-repeat;
-  width: 24px;
-  height: 24px;
-}
+.email, .facebook, .pinterest, .twitter,
+.popular
+{ display: inline-block; background: url('images/sprites.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
 
-.email{
-  background-position: -24px -24px ;
-}
-
-.facebook{
-  background-position: 0 -24px ;
-}
-
-.pinterest{
-  background-position: -24px 0;
-}
-
-.twitter{
-  background-position: 0 0;
-}
+.email { background-position: 0 -151px; width: 24px; height: 24px; }
+.facebook { background-position: 0 -176px; width: 24px; height: 24px; }
+.pinterest { background-position: 0 -201px; width: 24px; height: 24px; }
+.twitter { background-position: 0 -226px; width: 24px; height: 24px; }
+.popular { background-position: 0 -252px; width: 16px; height: 16px; }
+.logo { max-width: 100%; background-size: 100%; background-image: url('images/sprites.png'); background-position: 0 0%; background-size: 100%; }
 
 .pagination {
   width: 100%;

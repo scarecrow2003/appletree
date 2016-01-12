@@ -16,13 +16,6 @@ add_theme_support( 'post-formats', array( 'image', 'quote', 'status', 'link' ) )
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
 
-/*$custom_header_args = array(
-	'width'         => 150,
-	'height'        => 150,
-	'default-image' => get_template_directory_uri() . '/images/logo.png',
-);
-add_theme_support( 'custom-header', $custom_header_args );*/
-
 $custom_bg_args = array(
 	'default-color' => 'fbf7ee',
 	'default-image' => '',

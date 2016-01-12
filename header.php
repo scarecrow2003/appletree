@@ -77,9 +77,6 @@ function isPartOfCurrentMenuItem( $item )
                         <a href="/">
                             <img class="logo" alt="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABpJREFUeNrtwTEBAAAAwqD1T20ND6AAAIB3Awu4AAFSPGZ8AAAAAElFTkSuQmCC">
                         </a>
-                        <?php /*if ( '' != get_custom_header()->url ) : */?><!--
-                            <img src="<?php /*header_image(); */?>" class="custom-header" height="<?php /*echo get_custom_header()->height/($hasBanner ? 1 : 4/3); */?>" width="<?php /*echo get_custom_header()->width/($hasBanner ? 1 : 4/3); */?>" alt="logo" />
-                        --><?php /*endif; */?>
                     </div>
 
                     <div class="col-xs-6 pull-right">

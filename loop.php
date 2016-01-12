@@ -61,7 +61,6 @@
 
     <div class="apple-sep">
         <div class="popular"></div>
-        <!--<img src="/wp-content/uploads/2015/11/popular.png" width="16" height="16" alt="separator">-->
     </div>
 
 </article>

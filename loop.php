@@ -10,19 +10,29 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<h1 class="post-title"><?php
+    <header class="preview">
+        <div class="title cf">
+            <h2 class="post-title">
+                <a href="<?php echo is_singular()?'#':esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark">
+                    <span><?php the_title(); ?></span>
+                </a>
+            </h2>
+        </div>
+    </header>
 
+	<!--<h2 class="post-title"><?php
+/*
 		if ( is_singular() ) :
 			the_title();
-		else : ?>
+		else : */?>
 
-			<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><?php
-				the_title(); ?>
+			<a href="<?php /*echo esc_url( get_permalink() ); */?>" rel="bookmark"><?php
+/*				the_title(); */?>
 			</a><?php
+/*
+		endif; */?>
 
-		endif; ?>
-
-	</h1>
+	</h2>-->
 
 	<!--<div class="post-meta"><?php
 /*		appletree_post_meta(); */?>

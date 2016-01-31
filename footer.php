@@ -28,9 +28,9 @@
         <script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
         <![endif]-->
         <!-- Template scripts -->
-        <script type="text/javascript">
-            var templateDir = "<?php bloginfo('template_directory') ?>";
-        </script>
+        <!--<script type="text/javascript">
+            var templateDir = "<?php /*bloginfo('template_directory') */?>";
+        </script>-->
         <!-- Bower dependencies -->
         <script src="<?php echo get_template_directory_uri(); ?>/bower_components/jquery/dist/jquery.min.js"></script>
 
@@ -38,6 +38,25 @@
         <script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
         <!-- Template script dependency -->
         <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.min.js"></script>
+
+        <?php
+            $temp = pathinfo(get_page_template(), PATHINFO_FILENAME);
+            if ($temp == 'template-home') {
+        ?>
+        <script src="<?php echo get_template_directory_uri(); ?>/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.owl-carousel').owlCarousel({
+                    autoplay: true,
+                    loop: true,
+                    items: 1,
+                    autoHeight: true
+                });
+            });
+        </script>
+        <?php
+            }
+        ?>
 
 		<?php wp_footer(); ?>
 	</body>

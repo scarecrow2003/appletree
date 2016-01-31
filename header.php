@@ -61,6 +61,8 @@ function isPartOfCurrentMenuItem( $item )
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" />
+
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
@@ -119,7 +121,7 @@ function isPartOfCurrentMenuItem( $item )
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/appletreesg">
+                                    <a href="https://twitter.com/appletreesg" target="_blank">
                                         <div class="twitter"></div>
                                     </a>
                                 </li>
@@ -199,7 +201,7 @@ function isPartOfCurrentMenuItem( $item )
                                 </a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/appletreesg">
+                                <a href="https://twitter.com/appletreesg" target="_blank">
                                     <div class="twitter"></div>
                                 </a>
                             </li>

@@ -10,6 +10,7 @@
 get_header(); ?>
 
 	<section class="page-content primary" role="main">
+        <h1>Recent Photo Shooting Sessions</h1>
 		<?php
 			if ( have_posts() ):
 
